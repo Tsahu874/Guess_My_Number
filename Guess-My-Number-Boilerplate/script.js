@@ -14,4 +14,12 @@ document.querySelector('.check').addEventListener('click',function(){
     const guess = Number(document.querySelector('.guess').value);
     console.log("guess",guess);
 })
-displayMessage("Start Guessing...");
+
+if(!guess)
+{
+  displayMessage("Invalid Input");
+}
+else if(guess == secretNumber )
+{
+  displayMessage("Correct Guess");
+}
